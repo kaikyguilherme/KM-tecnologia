@@ -86,8 +86,6 @@ p { color: var(--texto-suave); line-height: 1.75; }
   border-radius: 99px;
   font-size: .72rem;
 }
-.menu-alternar { display: none; }
-
 /* Containers, seções, títulos, grids e cartões reutilizáveis. */
 .container { width: min(var(--largura), calc(100% - 40px)); margin: 0 auto; }
 .secao { padding: 76px 0; }
@@ -177,25 +175,24 @@ p { color: var(--texto-suave); line-height: 1.75; }
 .rodape-conteudo { display: flex; justify-content: space-between; gap: 20px; }
 .oculto { display: none !important; }
 
-/* Ajustes do cabeçalho e da navegação para telas médias. */
+/* Mantém a navegação visível e distribuída em várias linhas em telas estreitas. */
 @media (max-width: 900px) {
   .cabecalho-conteudo { flex-wrap: wrap; padding: 13px 0; }
-  .menu-alternar { display: inline-flex; }
-  .navegacao { display: none; width: 100%; order: 3; }
-  .navegacao.aberta { display: flex; }
-  .navegacao a { flex: 1 1 30%; text-align: center; }
+  .navegacao { display: flex; width: 100%; order: 3; justify-content: center; }
+  .navegacao a { flex: 0 1 auto; text-align: center; }
 }
 /* Reduz margens e reorganiza conteúdo em celulares. */
 @media (max-width: 600px) {
   .container, .cabecalho-conteudo, .rodape-conteudo { width: min(100% - 28px, var(--largura)); }
-  /* Mantém a marca, o menu e as ações do usuário na mesma linha em celulares. */
-  .cabecalho-conteudo { flex-wrap: nowrap; gap: 8px; min-height: 64px; padding: 8px 0; }
+  /* Mantém a marca e as ações na primeira linha e a navegação logo abaixo. */
+  .cabecalho-conteudo { flex-wrap: wrap; gap: 8px; min-height: 64px; padding: 8px 0; }
   .marca { flex: 0 0 auto; font-size: 1rem; white-space: nowrap; }
-  .menu-alternar { flex: 0 0 36px; width: 36px; min-width: 36px; padding: 0; }
   .acoes-cabecalho { flex: 0 0 auto; gap: 6px; margin-left: auto; }
   .acoes-cabecalho .botao { min-height: 36px; padding: 7px 8px; font-size: .78rem; }
   .acoes-cabecalho .acao-carrinho { width: 38px; padding: 7px; font-size: 0; }
   .acoes-cabecalho .acao-carrinho .contador-carrinho { margin-left: 0; }
+  .navegacao { order: 3; gap: 2px; }
+  .navegacao a { flex: 1 1 auto; padding: 8px 7px; font-size: .78rem; }
   .secao { padding: 55px 0; }
   .grade-produtos { grid-template-columns: 1fr; }
   .rodape-conteudo { flex-direction: column; }

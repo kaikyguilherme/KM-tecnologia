@@ -74,7 +74,6 @@
     cabecalho.innerHTML = `
       <div class="cabecalho-conteudo">
         <a class="marca" href="index.html" aria-label="KM Tecnologia, início">KM <span>TECNOLOGIA</span></a>
-        <button class="botao botao-secundario botao-pequeno menu-alternar" type="button" aria-expanded="false" aria-label="Abrir menu">☰</button>
         <nav class="navegacao" aria-label="Navegação principal">
           ${links.map(([nome, href, id]) => `<a href="${href}" class="${pagina === id ? 'ativa' : ''}">${nome}</a>`).join('')}
         </nav>
@@ -83,15 +82,6 @@
           <a class="botao botao-pequeno" href="${usuarioEntrou() ? 'usuario.html' : 'login.html'}">${usuarioEntrou() ? 'Perfil' : 'Entrar'}</a>
         </div>
       </div>`;
-    // Botão que abre e fecha a navegação em telas estreitas.
-    const alternar = cabecalho.querySelector('.menu-alternar');
-    alternar.addEventListener('click', () => {
-      // Alterna a visibilidade do menu e atualiza o estado acessível do botão.
-      const menu = cabecalho.querySelector('.navegacao');
-      // Estado aberto/fechado retornado ao alternar a classe visual do menu.
-      const aberto = menu.classList.toggle('aberta');
-      alternar.setAttribute('aria-expanded', String(aberto));
-    });
   }
   // Preenche o rodapé comum quando a página oferece o elemento correspondente.
   function montarRodape() {
