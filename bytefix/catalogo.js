@@ -1,3 +1,4 @@
+// Dados que definem os produtos exibidos e suas opções, quando aplicável.
 const produtos = [
   { id: 'powerbank', nome: 'Bateria portátil (Powerbank)', icone: '◉', descricao: 'Energia extra para carregar seu celular onde estiver.', opcoes: ['5000 mAh', '10000 mAh', '20000 mAh'] },
   { id: 'fone-bluetooth', nome: 'Fone Bluetooth', icone: '♫', descricao: 'Liberdade sem fio para música e chamadas.' },
@@ -9,7 +10,9 @@ const produtos = [
   { id: 'teclado', nome: 'Teclado', icone: '⌨', descricao: 'Teclados para completar seu espaço de trabalho.' }
 ];
 
+// Constrói os cartões de produto e seus controles de seleção e inclusão.
 function desenharProdutos() {
+  // Contêiner no qual os cartões do catálogo serão inseridos.
   const lista = document.querySelector('#lista-produtos');
   if (!lista) return;
   lista.innerHTML = produtos.map(produto => `
@@ -26,13 +29,18 @@ function desenharProdutos() {
       </div>
     </article>`).join('');
 }
+// Inicializa a listagem e o tratamento de inclusão no carrinho.
 document.addEventListener('DOMContentLoaded', () => {
   desenharProdutos();
+  // Um único listener atende aos botões de produto criados dinamicamente.
   document.querySelector('#lista-produtos').addEventListener('click', evento => {
+    // Localiza o botão associado ao cartão clicado.
     const botao = evento.target.closest('[data-produto]');
     if (!botao) return;
+    // Recupera os dados do produto selecionado e sua opção.
     const produto = produtos.find(item => item.id === botao.dataset.produto);
     if (!produto) return;
+    // Obtém a opção escolhida, se este produto oferecer opções.
     const opcao = produto.opcoes ? document.querySelector(`#opcao-${produto.id}`).value : '';
     window.KmTecnologia.adicionarAoCarrinho({
       id: `${produto.id}${opcao ? `-${opcao.replace(/\s/g, '').toLowerCase()}` : ''}`,

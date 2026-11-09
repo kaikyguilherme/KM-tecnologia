@@ -1,4 +1,5 @@
 <!doctype html>
+<!-- Painel que exibe pedidos locais após validar a sessão administrativa no servidor. -->
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8">
@@ -10,12 +11,15 @@
   <script src="painel.js" defer></script>
 </head>
 <body data-pagina="painel">
+  <!-- Cabeçalho comum montado pelo site.js. -->
   <header data-cabecalho></header>
   <main class="container secao">
     <span class="rotulo">Administração local</span>
     <h1 class="titulo-secao">Painel de <span class="destaque">solicitações.</span></h1>
     <div class="aviso aviso-painel">Demonstração: mostra somente dados gravados neste navegador. Não há login administrativo nem sincronização com outros dispositivos. Não use para guardar dados reais de clientes em produção.</div>
+    <!-- Estado da consulta de sessão, inclusive mensagens de erro. -->
     <p id="estado-painel" class="mensagem" role="status" aria-live="polite">Verificando acesso administrativo…</p>
+    <!-- Conteúdo oculto até a API confirmar uma sessão administrativa válida. -->
     <div id="conteudo-painel" class="oculto">
       <div class="linha"><p id="email-painel"></p><button class="botao botao-secundario botao-pequeno" id="sair-painel" type="button">Sair do painel</button></div>
       <section class="painel-resumos" id="resumo-painel"></section>

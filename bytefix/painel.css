@@ -1,5 +1,7 @@
+/* Cartões de resumo e linhas de pedidos no painel administrativo. */
 .aviso-painel { margin-bottom: 20px; }
 .painel-resumos { display: flex; flex-wrap: wrap; gap: 12px; }
 .painel-resumos .resumo-caixa { flex: 1 1 180px; }
 .pedido-admin { display: grid; grid-template-columns: 1fr auto; gap: 10px; align-items: center; }
+/* Empilha os dados e ações de cada pedido em telas menores. */
 @media (max-width: 650px) { .pedido-admin { grid-template-columns: 1fr; } }

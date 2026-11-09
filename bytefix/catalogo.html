@@ -1,4 +1,5 @@
 <!doctype html>
+<!-- Página do catálogo de acessórios disponíveis para consulta e solicitação. -->
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8">
@@ -10,12 +11,14 @@
   <script src="catalogo.js" defer></script>
 </head>
 <body data-pagina="catalogo">
+  <!-- Cabeçalho comum criado pelo site.js. -->
   <header data-cabecalho></header>
   <main class="container secao">
     <span class="rotulo">Acessórios</span>
     <h1 class="titulo-secao">Catálogo <span class="destaque">KM Tecnologia</span></h1>
     <p class="texto-intro">Encontre acessórios para celular, notebook e computador. Adicione os itens ao carrinho e consulte disponibilidade e valores pelo WhatsApp.</p>
     <div class="aviso aviso-catalogo">As imagens são espaços reservados: troque os arquivos e caminhos em <strong>catalogo.js</strong> quando tiver fotos dos produtos.</div>
+    <!-- Cartões e seletores são gerados com os dados de catalogo.js. -->
     <section class="grade grade-produtos" id="lista-produtos" aria-label="Produtos disponíveis"></section>
   </main>
   <footer data-rodape></footer>

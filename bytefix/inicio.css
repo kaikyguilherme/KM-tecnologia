@@ -1,3 +1,4 @@
+/* Estilos exclusivos da página inicial: destaque, apresentação e faixa de endereço. */
 .hero { position: relative; overflow: hidden; border-bottom: 1px solid var(--borda); }
 .hero-conteudo { min-height: 580px; display: grid; grid-template-columns: 1.15fr .85fr; align-items: center; gap: 30px; }
 .hero h1 { margin: 18px 0; }
@@ -16,7 +17,9 @@
 .faixa-endereco { padding: 45px 0; border-top: 1px solid var(--borda); border-bottom: 1px solid var(--borda); background: rgba(168, 85, 247, .055); }
 .faixa-endereco h2 { margin: 10px 0 0; }
 .faixa-endereco p { margin: 6px 0 0; }
+/* Animação decorativa do anel do destaque principal. */
 @keyframes girar { to { transform: rotate(360deg); } }
+/* Ajusta o destaque e a faixa de endereço para telas menores. */
 @media (max-width: 760px) {
   .hero-conteudo { grid-template-columns: 1fr; min-height: auto; padding-top: 65px; }
   .hero-visual { min-height: 290px; }

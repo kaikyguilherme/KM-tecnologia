@@ -1,3 +1,4 @@
+/* Layout responsivo, espaçamento e largura dos elementos do login administrativo. */
 .admin-login-layout { display: grid; grid-template-columns: 1fr minmax(320px, 470px); align-items: center; gap: 55px; min-height: 72vh; }
 .admin-login-form { padding: 26px; }
 .admin-login-form .botao { width: 100%; }

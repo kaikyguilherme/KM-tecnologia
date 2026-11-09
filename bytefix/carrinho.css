@@ -1,1 +1,2 @@
+/* Alinha as ações do carrinho no fim da área e permite quebra em telas estreitas. */
 .carrinho-acoes { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 10px; margin-top: 20px; }

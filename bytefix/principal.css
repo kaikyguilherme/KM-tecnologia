@@ -1,24 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
+/* Paleta, tipografia e medidas comuns usadas pelos componentes do site. */
 :root {
   color-scheme: dark;
-  --roxo: #a855f7;
-  --roxo-claro: #c084fc;
-  --roxo-escuro: #6b21a8;
-  --fundo: #09070e;
-  --painel: #12101a;
-  --painel-claro: #191523;
-  --texto: #f5f1fb;
-  --texto-suave: #aaa1b7;
-  --borda: rgba(192, 132, 252, .18);
-  --sucesso: #72e0ab;
-  --erro: #ff8290;
-  --largura: 1160px;
+  --roxo: #a855f7; /* Cor principal de destaque e de ações. */
+  --roxo-claro: #c084fc; /* Tom claro para títulos, ícones e informações destacadas. */
+  --roxo-escuro: #6b21a8; /* Tom escuro para fundos e indicadores. */
+  --fundo: #09070e; /* Cor de fundo geral das páginas. */
+  --painel: #12101a; /* Fundo padrão de caixas e painéis. */
+  --painel-claro: #191523; /* Variação clara do fundo de painéis. */
+  --texto: #f5f1fb; /* Cor principal do texto. */
+  --texto-suave: #aaa1b7; /* Cor de textos secundários e descrições. */
+  --borda: rgba(192, 132, 252, .18); /* Borda translúcida usada nos componentes. */
+  --sucesso: #72e0ab; /* Cor de mensagens de sucesso. */
+  --erro: #ff8290; /* Cor de mensagens e ações de erro. */
+  --largura: 1160px; /* Largura máxima do conteúdo central. */
   font-family: 'DM Sans', sans-serif;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
 }
 
+/* Normalização básica e estilos globais de texto, links, botões e imagens. */
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body {
@@ -48,6 +50,7 @@ p { color: var(--texto-suave); line-height: 1.75; }
   background: rgba(9, 7, 14, .88);
   backdrop-filter: blur(18px);
 }
+/* Largura alinhada do cabeçalho e do rodapé compartilhados. */
 .cabecalho-conteudo, .rodape-conteudo {
   width: min(var(--largura), calc(100% - 40px));
   margin: 0 auto;
@@ -85,6 +88,7 @@ p { color: var(--texto-suave); line-height: 1.75; }
 }
 .menu-alternar { display: none; }
 
+/* Containers, seções, títulos, grids e cartões reutilizáveis. */
 .container { width: min(var(--largura), calc(100% - 40px)); margin: 0 auto; }
 .secao { padding: 76px 0; }
 .secao-menor { padding: 48px 0; }
@@ -144,6 +148,7 @@ p { color: var(--texto-suave); line-height: 1.75; }
 .botao-perigo { border-color: rgba(255, 130, 144, .32); color: var(--erro); background: rgba(255, 130, 144, .08); }
 .botao-pequeno { min-height: 36px; padding: 7px 11px; font-size: .85rem; }
 .botao:disabled { cursor: not-allowed; opacity: .48; transform: none; }
+/* Campos de formulário, avisos e mensagens de estado. */
 .campo { display: grid; gap: 8px; margin: 0 0 17px; }
 .campo label { color: #e8e0f0; font-size: .9rem; font-weight: 600; }
 .campo input, .campo select, .campo textarea {
@@ -172,6 +177,7 @@ p { color: var(--texto-suave); line-height: 1.75; }
 .rodape-conteudo { display: flex; justify-content: space-between; gap: 20px; }
 .oculto { display: none !important; }
 
+/* Ajustes do cabeçalho e da navegação para telas médias. */
 @media (max-width: 900px) {
   .cabecalho-conteudo { flex-wrap: wrap; padding: 13px 0; }
   .menu-alternar { display: inline-flex; }
@@ -179,6 +185,7 @@ p { color: var(--texto-suave); line-height: 1.75; }
   .navegacao.aberta { display: flex; }
   .navegacao a { flex: 1 1 30%; text-align: center; }
 }
+/* Reduz margens e reorganiza conteúdo em celulares. */
 @media (max-width: 600px) {
   .container, .cabecalho-conteudo, .rodape-conteudo { width: min(100% - 28px, var(--largura)); }
   .acoes-cabecalho .botao-secundario { display: none; }

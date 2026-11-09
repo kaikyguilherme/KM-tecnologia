@@ -1,3 +1,4 @@
+/* Alinhamento vertical, ícone e ações dos cartões de serviço. */
 .cartao-servico { padding: 22px; display: flex; flex-direction: column; }
 .cartao-servico .icone-servico { margin-bottom: 15px; color: var(--roxo-claro); font-size: 1.8rem; }
 .cartao-servico .campo { margin-top: auto; padding-top: 3px; }

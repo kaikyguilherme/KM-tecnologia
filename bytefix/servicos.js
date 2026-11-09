@@ -1,3 +1,4 @@
+// Catálogo de serviços e opções disponíveis para solicitação.
 const servicos = [
   { id: 'pasta-termica', nome: 'Troca da pasta térmica', icone: '◉', descricao: 'Substituição da pasta térmica para ajudar na dissipação de calor e no funcionamento estável do equipamento.' },
   { id: 'windows', nome: 'Instalação do Windows', icone: '▦', descricao: 'Instalação e configuração do sistema operacional. A disponibilidade e a licença são confirmadas no orçamento.', opcoes: ['Windows 10', 'Windows 11', 'Windows 10 com pacote Office', 'Windows 11 com pacote Office'] },
@@ -8,7 +9,9 @@ const servicos = [
   { id: 'dobradicas', nome: 'Reparo de dobradiças', icone: '⌁', descricao: 'Inspeção e reparo das dobradiças e da estrutura da tampa do notebook.' }
 ];
 
+// Gera os cartões de serviço e seus seletores de opções.
 function desenharServicos() {
+  // Contêiner da página que recebe os cartões.
   const lista = document.querySelector('#lista-servicos');
   if (!lista) return;
   lista.innerHTML = servicos.map(servico => `
@@ -20,18 +23,24 @@ function desenharServicos() {
       <button class="botao botao-secundario" type="button" data-servico="${servico.id}">Adicionar à solicitação</button>
     </article>`).join('');
 }
+// Prepara os cartões e os controles de inclusão de serviço no carrinho.
 document.addEventListener('DOMContentLoaded', () => {
   desenharServicos();
+  // Delega os cliques nos botões dos cartões de serviço.
   document.querySelector('#lista-servicos').addEventListener('click', evento => {
+    // Recupera o botão clicado para identificar o serviço solicitado.
     const botao = evento.target.closest('[data-servico]');
     if (!botao) return;
+    // Exige uma conta local ativa antes de permitir a solicitação de serviço.
     if (!window.KmTecnologia.usuarioEntrou()) {
       alert('Entre ou crie sua conta para solicitar um serviço.');
       location.href = 'login.html?retorno=servicos.html';
       return;
     }
+    // Recupera o serviço selecionado e sua opção, se houver.
     const servico = servicos.find(item => item.id === botao.dataset.servico);
     if (!servico) return;
+    // Lê a opção escolhida no cartão ou usa texto vazio quando não há opções.
     const opcao = servico.opcoes ? document.querySelector(`#opcao-${servico.id}`).value : '';
     window.KmTecnologia.adicionarAoCarrinho({
       id: `${servico.id}${opcao ? `-${opcao.replace(/\s/g, '').toLowerCase()}` : ''}`,

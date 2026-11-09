@@ -1,4 +1,5 @@
 <!doctype html>
+<!-- Página que lista os itens locais escolhidos e inicia o envio do pedido. -->
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8">
@@ -10,10 +11,12 @@
   <script src="carrinho.js" defer></script>
 </head>
 <body data-pagina="carrinho">
+  <!-- Elementos comuns inseridos pelo script compartilhado. -->
   <header data-cabecalho></header>
   <main class="container secao">
     <span class="rotulo">Sua seleção</span>
     <h1 class="titulo-secao">Carrinho <span class="destaque">KM Tecnologia</span></h1>
+    <!-- O JavaScript cria aqui os itens e os respectivos botões de remoção. -->
     <div id="itens-carrinho" class="lista"></div>
     <div class="carrinho-acoes"><a class="botao botao-secundario" href="catalogo.html">Continuar comprando</a><button class="botao" id="finalizar-carrinho" type="button">Solicitar pelo WhatsApp</button></div>
   </main>

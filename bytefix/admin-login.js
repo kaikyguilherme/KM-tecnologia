@@ -1,6 +1,9 @@
+// Inicializa o formulário administrativo após a página e seus elementos carregarem.
 document.addEventListener('DOMContentLoaded', async () => {
+  // Elemento usado para informar erros e o estado da autenticação.
   const mensagem = document.querySelector('#mensagem-admin');
   try {
+    // Verifica se já há uma sessão válida para evitar pedir login novamente.
     const sessao = await fetch('/api/auth/session', { credentials: 'same-origin' });
     if (sessao.ok) {
       location.replace('painel.html');
@@ -13,20 +16,25 @@ document.addEventListener('DOMContentLoaded', async () => {
     return;
   }
 
+  // Envia as credenciais digitadas para a função de login do servidor.
   document.querySelector('#form-admin').addEventListener('submit', async evento => {
     evento.preventDefault();
+    // Desabilita o botão enquanto a requisição está sendo processada.
     const botao = evento.currentTarget.querySelector('button[type="submit"]');
     botao.disabled = true;
     mensagem.textContent = 'Verificando acesso…';
     mensagem.classList.remove('erro');
+    // Lê os campos de e-mail e senha do formulário atual.
     const dados = new FormData(evento.currentTarget);
     try {
+      // Solicita a autenticação e permite que o navegador guarde o cookie da sessão.
       const resposta = await fetch('/api/auth/login', {
         method: 'POST',
         credentials: 'same-origin',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: dados.get('email'), senha: dados.get('senha') })
       });
+      // Interpreta a resposta JSON e encaminha para o painel se a autenticação passar.
       const resultado = await resposta.json();
       if (!resposta.ok) throw new Error(resultado.erro || 'Não foi possível entrar.');
       location.replace('painel.html');
