@@ -5,7 +5,7 @@ function contasSalvas() {
 }
 function redirecionarAposLogin() {
   const destino = new URLSearchParams(location.search).get('retorno');
-  const paginasPermitidas = ['inicio.html', 'catalogo.html', 'servicos.html', 'carrinho.html', 'usuario.html'];
+  const paginasPermitidas = ['index.html', 'catalogo.html', 'servicos.html', 'carrinho.html', 'usuario.html'];
   location.href = paginasPermitidas.includes(destino) ? destino : 'usuario.html';
 }
 function mostrarMensagem(texto, erro = false) {

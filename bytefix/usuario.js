@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
     <div class="aviso">Este histórico é armazenado apenas neste navegador. Para acessar de outros aparelhos, será necessário conectar o site a um servidor e banco de dados.</div>`;
   document.querySelector('#sair-conta').addEventListener('click', () => {
     localStorage.removeItem(window.KmTecnologia.chaveUsuario);
-    location.href = 'inicio.html';
+    location.href = 'index.html';
   });
   document.querySelector('#foto-perfil-arquivo').addEventListener('change', evento => {
     const arquivo = evento.target.files[0];

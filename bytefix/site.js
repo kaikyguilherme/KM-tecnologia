@@ -12,7 +12,7 @@
   const chaveUsuario = 'km_tecnologia_usuario_atual';
   const numeroWhatsApp = '5571988015807'; // Troque pelo número da loja com DDI e DDD.
   const links = [
-    ['Início', 'inicio.html', 'inicio'],
+    ['Início', 'index.html', 'inicio'],
     ['Catálogo', 'catalogo.html', 'catalogo'],
     ['Serviços', 'servicos.html', 'servicos'],
     ['Feedbacks', 'feedback.html', 'feedback'],
@@ -53,7 +53,7 @@
     cabecalho.className = 'cabecalho';
     cabecalho.innerHTML = `
       <div class="cabecalho-conteudo">
-        <a class="marca" href="inicio.html" aria-label="KM Tecnologia, início">KM <span>TECNOLOGIA</span></a>
+        <a class="marca" href="index.html" aria-label="KM Tecnologia, início">KM <span>TECNOLOGIA</span></a>
         <button class="botao botao-secundario botao-pequeno menu-alternar" type="button" aria-expanded="false" aria-label="Abrir menu">☰</button>
         <nav class="navegacao" aria-label="Navegação principal">
           ${links.map(([nome, href, id]) => `<a href="${href}" class="${pagina === id ? 'ativa' : ''}">${nome}</a>`).join('')}
