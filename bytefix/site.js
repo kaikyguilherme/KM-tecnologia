@@ -79,7 +79,7 @@
           ${links.map(([nome, href, id]) => `<a href="${href}" class="${pagina === id ? 'ativa' : ''}">${nome}</a>`).join('')}
         </nav>
         <div class="acoes-cabecalho">
-          <a class="botao botao-secundario botao-pequeno" href="carrinho.html">Carrinho <span class="contador-carrinho" data-contador-carrinho>0</span></a>
+          <a class="botao botao-secundario botao-pequeno acao-carrinho" href="carrinho.html" aria-label="Carrinho" title="Carrinho">Carrinho <span class="contador-carrinho" data-contador-carrinho>0</span></a>
           <a class="botao botao-pequeno" href="${usuarioEntrou() ? 'usuario.html' : 'login.html'}">${usuarioEntrou() ? 'Perfil' : 'Entrar'}</a>
         </div>
       </div>`;

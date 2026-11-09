@@ -188,6 +188,14 @@ p { color: var(--texto-suave); line-height: 1.75; }
 /* Reduz margens e reorganiza conteúdo em celulares. */
 @media (max-width: 600px) {
   .container, .cabecalho-conteudo, .rodape-conteudo { width: min(100% - 28px, var(--largura)); }
+  /* Mantém a marca, o menu e as ações do usuário na mesma linha em celulares. */
+  .cabecalho-conteudo { flex-wrap: nowrap; gap: 8px; min-height: 64px; padding: 8px 0; }
+  .marca { flex: 0 0 auto; font-size: 1rem; white-space: nowrap; }
+  .menu-alternar { flex: 0 0 36px; width: 36px; min-width: 36px; padding: 0; }
+  .acoes-cabecalho { flex: 0 0 auto; gap: 6px; margin-left: auto; }
+  .acoes-cabecalho .botao { min-height: 36px; padding: 7px 8px; font-size: .78rem; }
+  .acoes-cabecalho .acao-carrinho { width: 38px; padding: 7px; font-size: 0; }
+  .acoes-cabecalho .acao-carrinho::before { content: '🛒'; font-size: 18px; }
   .secao { padding: 55px 0; }
   .grade-produtos { grid-template-columns: 1fr; }
   .rodape-conteudo { flex-direction: column; }
