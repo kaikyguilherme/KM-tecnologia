@@ -1,5 +1,5 @@
 <!doctype html>
-<!-- Painel que exibe pedidos locais após validar a sessão administrativa no servidor. -->
+<!-- Painel que exibe pedidos do Supabase após validar a sessão administrativa. -->
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8">
@@ -14,9 +14,9 @@
   <!-- Cabeçalho comum montado pelo site.js. -->
   <header data-cabecalho></header>
   <main class="container secao">
-    <span class="rotulo">Administração local</span>
+    <span class="rotulo">Administração</span>
     <h1 class="titulo-secao">Painel de <span class="destaque">solicitações.</span></h1>
-    <div class="aviso aviso-painel">Demonstração: mostra somente dados gravados neste navegador. Não há login administrativo nem sincronização com outros dispositivos. Não use para guardar dados reais de clientes em produção.</div>
+    <div class="aviso aviso-painel">Os pedidos são carregados do banco de dados compartilhado. O acesso administrativo é restrito.</div>
     <!-- Estado da consulta de sessão, inclusive mensagens de erro. -->
     <p id="estado-painel" class="mensagem" role="status" aria-live="polite">Verificando acesso administrativo…</p>
     <!-- Conteúdo oculto até a API confirmar uma sessão administrativa válida. -->

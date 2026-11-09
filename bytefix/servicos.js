@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Recupera o botão clicado para identificar o serviço solicitado.
     const botao = evento.target.closest('[data-servico]');
     if (!botao) return;
-    // Exige uma conta local ativa antes de permitir a solicitação de serviço.
+    // Exige um perfil conectado antes de permitir a solicitação de serviço.
     if (!window.KmTecnologia.usuarioEntrou()) {
       alert('Entre ou crie sua conta para solicitar um serviço.');
       location.href = 'login.html?retorno=servicos.html';
