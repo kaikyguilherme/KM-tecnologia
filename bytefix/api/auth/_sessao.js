@@ -63,15 +63,12 @@ function emailDaSessao(request) {
   }
 }
 
-function responder(request, status, dados, cabecalhos = {}) {
-  if (request.method === 'OPTIONS') {
-    return { statusCode: 204, headers: { Allow: 'GET, POST, OPTIONS', ...cabecalhos }, body: '' };
-  }
-  return {
-    statusCode: status,
-    headers: { 'Content-Type': 'application/json; charset=utf-8', 'Cache-Control': 'no-store', ...cabecalhos },
-    body: JSON.stringify(dados)
-  };
+function responder(response, status, dados, cabecalhos = {}) {
+  response.statusCode = status;
+  response.setHeader('Cache-Control', 'no-store');
+  if (status !== 204) response.setHeader('Content-Type', 'application/json; charset=utf-8');
+  Object.entries(cabecalhos).forEach(([nome, valor]) => response.setHeader(nome, valor));
+  response.end(status === 204 ? '' : JSON.stringify(dados));
 }
 
 module.exports = { criarCookie, emailDaSessao, nomeCookie, responder };
