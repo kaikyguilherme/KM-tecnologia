@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Acesso administrativo | KM Tecnologia</title>
+  <link rel="stylesheet" href="principal.css">
+  <link rel="stylesheet" href="admin-login.css">
+  <script src="site.js" defer></script>
+  <script src="admin-login.js" defer></script>
+</head>
+<body data-pagina="admin-login">
+  <header data-cabecalho></header>
+  <main class="container secao admin-login-layout">
+    <section>
+      <span class="rotulo">Acesso restrito</span>
+      <h1>Painel <span class="destaque">administrativo.</span></h1>
+      <p>Entre com a conta autorizada para acessar a administração da KM Tecnologia.</p>
+    </section>
+    <form class="cartao admin-login-form" id="form-admin">
+      <div class="campo"><label for="email-admin">E-mail autorizado</label><input id="email-admin" name="email" type="email" autocomplete="username" required></div>
+      <div class="campo"><label for="senha-admin">Senha</label><input id="senha-admin" name="senha" type="password" autocomplete="current-password" required></div>
+      <button class="botao" type="submit">Entrar no painel</button>
+      <p class="mensagem" id="mensagem-admin" role="status" aria-live="polite"></p>
+      <div class="aviso">A autenticação é validada pelo servidor. A senha não é armazenada neste site.</div>
+    </form>
+  </main>
+  <footer data-rodape></footer>
+</body>
+</html>

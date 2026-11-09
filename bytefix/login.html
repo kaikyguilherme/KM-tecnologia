@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Entrar ou criar conta | KM Tecnologia</title>
+  <link rel="stylesheet" href="principal.css">
+  <link rel="stylesheet" href="login.css">
+  <script src="site.js" defer></script>
+  <script src="login.js" defer></script>
+</head>
+<body data-pagina="login">
+  <header data-cabecalho></header>
+  <main class="container secao login-layout">
+    <section class="login-chamada">
+      <span class="rotulo">Sua conta KM Tecnologia</span>
+      <h1>Seu atendimento,<br><span class="destaque">em um só lugar.</span></h1>
+      <p>Acompanhe suas solicitações, consulte o histórico e deixe seu feedback após a conclusão do serviço.</p>
+    </section>
+    <section class="cartao login-cartao">
+      <div class="abas-login" role="tablist">
+        <button class="aba-login ativa" type="button" data-formulario="entrar">Entrar</button>
+        <button class="aba-login" type="button" data-formulario="criar">Criar conta</button>
+      </div>
+      <form id="form-entrar">
+        <div class="campo"><label for="email-entrar">E-mail</label><input id="email-entrar" name="email" type="email" autocomplete="email" required></div>
+        <div class="campo"><label for="senha-entrar">Senha</label><input id="senha-entrar" name="senha" type="password" autocomplete="current-password" required></div>
+        <button class="botao" type="submit">Entrar na conta</button>
+      </form>
+      <form id="form-criar" class="oculto">
+        <div class="campo"><label for="nome-criar">Nome</label><input id="nome-criar" name="nome" autocomplete="name" required minlength="2"></div>
+        <div class="campo"><label for="email-criar">E-mail</label><input id="email-criar" name="email" type="email" autocomplete="email" required></div>
+        <div class="campo"><label for="senha-criar">Senha (mínimo 6 caracteres)</label><input id="senha-criar" name="senha" type="password" autocomplete="new-password" required minlength="6"></div>
+        <button class="botao" type="submit">Criar conta</button>
+      </form>
+      <p id="mensagem-login" class="mensagem" role="status" aria-live="polite"></p>
+      <div class="aviso">Demonstração local: os dados ficam apenas neste navegador. Não use senha pessoal; login e armazenamento não substituem autenticação segura em servidor.</div>
+    </section>
+  </main>
+  <footer data-rodape></footer>
+</body>
+</html>

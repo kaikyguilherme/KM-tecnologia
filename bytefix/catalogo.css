@@ -1,0 +1,6 @@
+.aviso-catalogo { margin: 24px 0; }
+.produto-opcao { margin: 14px 0; }
+.produto-opcao .campo { margin: 0; }
+.cartao-produto { overflow: hidden; }
+.cartao-produto .cartao-conteudo { display: flex; min-height: 210px; flex-direction: column; align-items: flex-start; }
+.cartao-produto .botao { margin-top: auto; }

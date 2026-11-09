@@ -1,0 +1,4 @@
+.tecnico-apresentacao { display: grid; grid-template-columns: minmax(180px, .7fr) 1.3fr; align-items: center; gap: 45px; padding: clamp(24px, 6vw, 65px); }
+.tecnico-apresentacao h1 { font-size: clamp(2.2rem, 5vw, 3.8rem); }
+.tecnico-monograma { display: grid; width: min(250px, 60vw); aspect-ratio: 1; place-items: center; border: 1px solid var(--borda); border-radius: 36px; color: #e9d5ff; background: radial-gradient(circle at 30% 20%, #7e22ce, #17111f 70%); box-shadow: 0 0 65px rgba(168,85,247,.25); font: 700 4.5rem 'Space Grotesk', sans-serif; }
+@media (max-width: 700px) { .tecnico-apresentacao { grid-template-columns: 1fr; } }

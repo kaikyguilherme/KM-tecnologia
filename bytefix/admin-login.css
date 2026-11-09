@@ -1,0 +1,5 @@
+.admin-login-layout { display: grid; grid-template-columns: 1fr minmax(320px, 470px); align-items: center; gap: 55px; min-height: 72vh; }
+.admin-login-form { padding: 26px; }
+.admin-login-form .botao { width: 100%; }
+.admin-login-form .aviso { margin-top: 16px; }
+@media (max-width: 760px) { .admin-login-layout { grid-template-columns: 1fr; gap: 20px; } }

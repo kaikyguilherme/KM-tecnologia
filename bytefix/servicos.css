@@ -1,0 +1,4 @@
+.cartao-servico { padding: 22px; display: flex; flex-direction: column; }
+.cartao-servico .icone-servico { margin-bottom: 15px; color: var(--roxo-claro); font-size: 1.8rem; }
+.cartao-servico .campo { margin-top: auto; padding-top: 3px; }
+.cartao-servico .botao { margin-top: 15px; }

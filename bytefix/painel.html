@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Painel administrativo | KM Tecnologia</title>
+  <link rel="stylesheet" href="principal.css">
+  <link rel="stylesheet" href="painel.css">
+  <script src="site.js" defer></script>
+  <script src="painel.js" defer></script>
+</head>
+<body data-pagina="painel">
+  <header data-cabecalho></header>
+  <main class="container secao">
+    <span class="rotulo">Administração local</span>
+    <h1 class="titulo-secao">Painel de <span class="destaque">solicitações.</span></h1>
+    <div class="aviso aviso-painel">Demonstração: mostra somente dados gravados neste navegador. Não há login administrativo nem sincronização com outros dispositivos. Não use para guardar dados reais de clientes em produção.</div>
+    <p id="estado-painel" class="mensagem" role="status" aria-live="polite">Verificando acesso administrativo…</p>
+    <div id="conteudo-painel" class="oculto">
+      <div class="linha"><p id="email-painel"></p><button class="botao botao-secundario botao-pequeno" id="sair-painel" type="button">Sair do painel</button></div>
+      <section class="painel-resumos" id="resumo-painel"></section>
+      <section class="secao-menor"><h2>Solicitações de serviços</h2><div id="pedidos-painel" class="lista"></div></section>
+    </div>
+  </main>
+  <footer data-rodape></footer>
+</body>
+</html>

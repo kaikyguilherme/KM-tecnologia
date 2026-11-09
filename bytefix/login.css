@@ -1,0 +1,9 @@
+.login-layout { display: grid; grid-template-columns: 1fr minmax(320px, 470px); align-items: center; gap: 65px; min-height: 74vh; }
+.login-chamada p { max-width: 470px; }
+.login-cartao { padding: 25px; }
+.login-cartao .botao { width: 100%; }
+.abas-login { display: flex; gap: 7px; margin-bottom: 24px; padding: 4px; border-radius: 12px; background: rgba(0,0,0,.25); }
+.aba-login { flex: 1; padding: 10px; border: 0; border-radius: 9px; color: var(--texto-suave); background: transparent; cursor: pointer; }
+.aba-login.ativa { color: #fff; background: rgba(168,85,247,.22); }
+.login-cartao .aviso { margin-top: 16px; }
+@media (max-width: 760px) { .login-layout { grid-template-columns: 1fr; gap: 24px; } .login-chamada h1 { font-size: 2.8rem; } }
