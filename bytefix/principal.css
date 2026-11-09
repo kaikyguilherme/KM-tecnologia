@@ -195,7 +195,7 @@ p { color: var(--texto-suave); line-height: 1.75; }
   .acoes-cabecalho { flex: 0 0 auto; gap: 6px; margin-left: auto; }
   .acoes-cabecalho .botao { min-height: 36px; padding: 7px 8px; font-size: .78rem; }
   .acoes-cabecalho .acao-carrinho { width: 38px; padding: 7px; font-size: 0; }
-  .acoes-cabecalho .acao-carrinho::before { content: '🛒'; font-size: 18px; }
+  .acoes-cabecalho .acao-carrinho .contador-carrinho { margin-left: 0; }
   .secao { padding: 55px 0; }
   .grade-produtos { grid-template-columns: 1fr; }
   .rodape-conteudo { flex-direction: column; }
