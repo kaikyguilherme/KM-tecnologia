@@ -1,12 +1,12 @@
 // Dados que definem os produtos exibidos e suas opções, quando aplicável.
 const produtos = [
-  { id: 'powerbank', nome: 'Bateria portátil (Powerbank)', icone: '◉', descricao: 'Energia extra para carregar seu celular onde estiver.', opcoes: ['5000 mAh', '10000 mAh', '20000 mAh'] },
-  { id: 'fone-bluetooth', nome: 'Fone Bluetooth', icone: '♫', descricao: 'Liberdade sem fio para música e chamadas.' },
+  { id: 'powerbank', nome: 'Bateria portátil (Powerbank)', icone: '◉', imagem: 'imagem/powerbank.jpg', descricao: 'Energia extra para carregar seu celular onde estiver.', opcoes: ['5000 mAh', '10000 mAh', '20000 mAh'] },
+  { id: 'fone-bluetooth', nome: 'Fone Bluetooth', icone: '♫', imagem: 'imagem/fone-bluetooth.jpg', descricao: 'Liberdade sem fio para música e chamadas.' },
   { id: 'fone-com-fio', nome: 'Fone com fio', icone: '♬', descricao: 'Praticidade e áudio para o seu dia a dia.' },
-  { id: 'carregador', nome: 'Carregador', icone: 'ϟ', descricao: 'Carregadores para manter seus dispositivos prontos.' },
-  { id: 'cabo-carregador', nome: 'Cabo de carregador', icone: '⌁', descricao: 'Cabos para carregar e conectar seus equipamentos.' },
+  { id: 'carregador', nome: 'Carregador', icone: 'ϟ', imagem: 'imagem/carregador.jpg', descricao: 'Carregadores para manter seus dispositivos prontos.' },
+  { id: 'cabo-carregador', nome: 'Cabo de carregador', icone: '⌁', imagem: 'imagem/cabo-carregador.jpg', descricao: 'Cabos para carregar e conectar seus equipamentos.' },
   { id: 'fonte-carregador', nome: 'Fonte de carregador', icone: '▰', descricao: 'Fontes compatíveis com diferentes dispositivos.' },
-  { id: 'mouse', nome: 'Mouse', icone: '⌖', descricao: 'Acessório para trabalhar, estudar ou jogar.' },
+  { id: 'mouse', nome: 'Mouse', icone: '⌖', imagem: 'imagem/mouse.jpg', descricao: 'Acessório para trabalhar, estudar ou jogar.' },
   { id: 'teclado', nome: 'Teclado', icone: '⌨', descricao: 'Teclados para completar seu espaço de trabalho.' }
 ];
 
